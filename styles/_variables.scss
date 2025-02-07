@@ -1,0 +1,21 @@
+:root {
+  --color-dark: #0c1417;
+  --color-white: #ffffff;
+  --color-gray: rgba(12, 20, 23, 0.5);
+  --color-accent: #f7931e;
+
+  --border: 1px solid var(--color-gray);
+  --border-light: 1px solid var(--color-white);
+
+  --container-width: 1180px;
+  --container-padding-x: 130px;
+
+  --shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.08);
+
+  --font-family-base: "Montserrat", sans-serif;
+
+  --transition-duration: 0.2s;
+
+  --height-button: 60px;
+  --height-button-small: 50px;
+}

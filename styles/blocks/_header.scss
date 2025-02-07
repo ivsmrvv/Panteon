@@ -1,0 +1,171 @@
+.header {
+  &__inner {
+    position: relative;
+    padding: 36px 65px 57px;
+    height: 950px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.1) 100%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url(../../images/hero-image.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      @include square(31px);
+
+      content: "";
+      position: absolute;
+      bottom: 50px;
+      left: 46%;
+      background-image: url(../../images/icons/arrow.svg);
+    }
+
+    @include desktop {
+      padding-inline: 40px;
+    }
+
+    @include mobile {
+      padding: 15px 30px 50px;
+      height: 799px;
+    }
+  }
+
+  @include mobile {
+    &__logo {
+      width: 130px;
+      height: 42px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: 255px;
+    }
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      &:not(:last-child) {
+        margin-bottom: 198px;
+      }
+    }
+
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 30px;
+
+      &:not(:last-child) {
+        margin-bottom: 146px;
+      }
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      column-gap: 30px;
+      align-self: end;
+
+      @include tablet {
+        column-gap: 20px;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: end;
+      height: 49px;
+
+      @include hover {
+        background-color: var(--color-accent);
+      }
+    }
+
+    @include tablet {
+      order: 1;
+      grid-column: -1 / 1;
+      margin-inline: auto;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: end;
+    height: 49px;
+
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+
+  &__button-burger {
+    @include reset-button;
+    @include square(49px);
+
+    position: relative;
+
+    &::after {
+      @include abc-center;
+
+      content: "";
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-white);
+      border-radius: 10px;
+      box-shadow: 0 6px var(--color-white), 0 -6px var(--color-white);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 35px;
+
+    &:not(:last-child) {
+      margin-bottom: 284px;
+    }
+
+    @include tablet {
+    }
+
+    @include mobile {
+      row-gap: 23px;
+
+      &:not(:last-child) {
+        margin-bottom: 203px;
+      }
+    }
+  }
+
+  &__title {
+    @include fluid-text(48, 64);
+
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  &__button {
+    margin-top: -8px;
+    margin-left: 10px;
+
+    background-image: url(../../images/icons/button-tr.svg);
+  }
+}
