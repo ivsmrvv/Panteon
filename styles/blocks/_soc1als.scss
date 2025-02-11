@@ -1,10 +1,12 @@
 .soc1als {
   display: flex;
   justify-content: end;
+  margin-top: auto;
 
   &__list {
     display: flex;
     align-items: center;
+
     column-gap: 15px;
   }
 }

@@ -18,4 +18,8 @@
 
   --height-button: 60px;
   --height-button-small: 50px;
+
+  @include tablet {
+    --container-padding-x: 0;
+  }
 }

@@ -1,4 +1,13 @@
 .section {
   padding-top: 100px;
   padding-inline: 60px;
+
+  @include tablet {
+    padding-top: 70px;
+    padding-inline: 15px;
+  }
+
+  @include mobile {
+    padding-top: 90px;
+  }
 }
