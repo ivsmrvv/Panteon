@@ -89,7 +89,7 @@
       height: 49px;
 
       @include hover {
-        background-color: var(--color-accent);
+        color: var(--color-accent);
       }
     }
 
@@ -107,6 +107,10 @@
 
     @include tablet {
       margin-left: auto;
+    }
+
+    @include hover {
+      color: var(--color-accent);
     }
   }
 
@@ -165,7 +169,5 @@
   &__button {
     margin-top: -8px;
     margin-left: 10px;
-
-    background-image: url(../../images/icons/button-tr.svg);
   }
 }

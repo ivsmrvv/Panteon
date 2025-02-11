@@ -1,0 +1,124 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  width: 100%;
+
+  &__main {
+    display: flex;
+    column-gap: 76px;
+    justify-content: space-between;
+
+    @include desktop {
+      margin: 0;
+      padding-inline: 0;
+      column-gap: 30px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 60px;
+    }
+
+    &-image {
+      &--btm {
+        margin-top: 40px;
+
+        @include tablet {
+          margin-top: 0;
+        }
+      }
+
+      @include desktop {
+        width: 250px;
+        height: auto;
+      }
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+
+      @include tablet {
+        order: -1;
+        align-self: center;
+        align-items: center;
+      }
+    }
+
+    &-preview {
+      display: flex;
+      column-gap: 30px;
+      flex-shrink: 0;
+      align-items: start;
+
+      @include tablet {
+        align-self: center;
+      }
+    }
+
+    &-title {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      @include desktop {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-description {
+      max-width: 451px;
+
+      @include tablet {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__advantage {
+    @include desktop {
+      display: flex;
+      justify-content: center;
+
+      &-description {
+        align-self: center;
+      }
+    }
+
+    &-list {
+      display: flex;
+      column-gap: 30px;
+      justify-content: space-between;
+      padding-bottom: 25px;
+
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 30px;
+      }
+
+      @include tablet {
+        row-gap: 60px;
+        column-gap: 30px;
+        justify-content: space-between;
+      }
+    }
+
+    &-item {
+      display: flex;
+      column-gap: 25px;
+
+      @include tablet {
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
